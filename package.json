@@ -1,0 +1,20 @@
+{
+  "name": "bacatel-website",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:images && npm run build:favicons && npm run build:fonts && npm run build:css && npm run build:js",
+    "build:images": "node scripts/optimize-images.js",
+    "build:favicons": "node scripts/build-favicons.js",
+    "build:css": "npx clean-css-cli -o src/css/main.min.css src/css/main.css",
+    "build:js": "npx terser src/js/theme.js src/js/nav.js src/js/gallery.js src/js/main.js -o src/js/main.min.js -c -m",
+    "build:fonts": "node scripts/build-fonts.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "to-ico": "^1.1.5"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/dm-sans": "^5.2.8"
+  }
+}

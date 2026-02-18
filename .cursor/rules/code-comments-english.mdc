@@ -1,0 +1,30 @@
+---
+description: Code comments and documentation must always be in English
+alwaysApply: true
+---
+
+# Code Comments in English
+
+All code comments, JSDoc blocks, and inline documentation must be written in **English**.
+
+## Applies to
+
+- JSDoc (`/** ... */`, `@param`, `@returns`, etc.)
+- Block comments (`/* ... */`)
+- Inline comments (`// ...`)
+- README and technical documentation
+
+## Does not apply to
+
+- User-facing strings (UI labels, aria-label, error messages shown to users)
+- Content that must match the app's display language (e.g. Polish for bacatel.pl)
+
+## Example
+
+```javascript
+// ✅ GOOD
+/** Returns the currently active theme (saved or from system preference). */
+
+// ❌ BAD
+/** Zwraca aktualnie aktywny motyw (zapamiętany lub z preferencji systemu). */
+```

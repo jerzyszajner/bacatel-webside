@@ -1,0 +1,21 @@
+# Zależności
+node_modules/
+
+# Logi i cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Notes
+dev-notes
