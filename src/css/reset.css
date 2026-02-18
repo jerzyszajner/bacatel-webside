@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Reset – Baca Tel
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list bullets only from UI lists (nav, offer, service, contact) */
+.nav__list,
+.offer-list,
+.service-list,
+.contact-info__list {
+  list-style: none;
+}

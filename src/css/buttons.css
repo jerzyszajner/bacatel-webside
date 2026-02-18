@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-xl);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-btn-on-accent);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn--call {
+  position: relative;
+  background: var(--color-accent);
+  color: var(--color-btn-on-accent);
+  border: none;
+}
+
+.btn--call:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-btn-on-accent);
+  box-shadow: 0 4px 16px rgba(154, 123, 15, 0.35);
+  animation: none;
+}
+
+.btn--call:active {
+  box-shadow: 0 2px 8px rgba(154, 123, 15, 0.3);
+}
+
+.btn--secondary {
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--route {
+  position: relative;
+  background: var(--color-brand);
+  color: var(--color-btn-on-accent);
+  border: none;
+  animation: btn-route-pulse 2.5s ease-in-out infinite;
+}
+
+.btn--route:hover {
+  background: var(--color-brand-dark);
+  color: var(--color-btn-on-accent);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.35);
+  animation: none;
+}
+
+.btn--route:active {
+  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
+}
+
+.btn__icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.4em;
+  background: var(--color-btn-on-accent);
+  mask: url("../assets/icons/icon-map-pin.svg") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("../assets/icons/icon-map-pin.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  vertical-align: -0.2em;
+}
+
+.btn__icon--phone {
+  mask-image: url("../assets/icons/icon-phone.svg");
+  -webkit-mask-image: url("../assets/icons/icon-phone.svg");
+}
+
+@keyframes btn-route-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(196, 30, 58, 0);
+  }
+}

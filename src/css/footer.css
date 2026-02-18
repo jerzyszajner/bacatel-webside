@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.footer__company,
+.footer__owner,
+.footer__address,
+.footer__contact,
+.footer__hours,
+.footer__copy {
+  margin: 0 0 var(--space-xs);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.footer__owner {
+  font-weight: 500;
+}
+
+.footer__copy {
+  margin-top: var(--space-lg);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
