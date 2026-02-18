@@ -2,6 +2,8 @@
 
 Modern single-page website for Baca Tel (mobile phones shop, Przeworsk) – HTML, CSS, vanilla JS.
 
+**Live:** [https://bacatel.netlify.app/](https://bacatel.netlify.app/)
+
 ## Project Structure
 
 ```
