@@ -29,8 +29,11 @@ bacatel-website/
 │   ├── js/
 │   │   ├── theme.js    # Dark mode toggle
 │   │   ├── nav.js      # Mobile menu (hamburger)
-│   │   ├── gallery.js  # Image carousel
-│   │   ├── main.js     # Entry point, scroll-top, map lazy-load
+│   │   ├── gallery.js  # Image carousel (Swiper)
+│   │   ├── hours.js    # Hero hours status (open/closed)
+│   │   ├── scroll.js   # Scroll-to-top, active nav, button visibility
+│   │   ├── map.js      # Map iframe lazy-load
+│   │   ├── main.js     # Entry point (init modules)
 │   │   └── main.min.js # Built, minified (npm run build:js)
 │   └── assets/
 │       ├── fonts/      # Cormorant Garamond, DM Sans (npm run build:fonts)
@@ -67,7 +70,9 @@ npx serve .
 ## Features
 
 - **index.html** – Semantic structure, SEO meta, Open Graph, JSON-LD (LocalBusiness), gallery
+- **Swiper** – Gallery carousel (CDN with SRI integrity)
 - **Dark mode** – System preference + manual toggle, no flicker on load
+- **Hours status** – Hero section shows open/closed based on business hours
 - **Responsive** – Mobile-first, hamburger menu
 - **Accessibility** – Skip link, ARIA labels, reduced motion support
 - **Performance** – WebP images, lazy-loaded map iframe, minified assets
