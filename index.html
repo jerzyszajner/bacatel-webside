@@ -85,6 +85,7 @@
     />
 
     <!-- Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/css/main.min.css" />
     <link
       rel="preload"
@@ -281,38 +282,9 @@
             Zapraszamy do naszego sklepu – zobacz, jak wygląda Baca Tel od
             środka i z zewnątrz.
           </p>
-          <div
-            class="gallery"
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Galeria zdjęć sklepu"
-          >
-            <div
-              class="gallery__live sr-only"
-              aria-live="polite"
-              aria-atomic="true"
-            ></div>
-            <button
-              type="button"
-              class="gallery__btn gallery__btn--prev"
-              aria-label="Poprzednie zdjęcie"
-            >
-              <span class="gallery__btn-icon" aria-hidden="true"></span>
-            </button>
-            <button
-              type="button"
-              class="gallery__btn gallery__btn--next"
-              aria-label="Następne zdjęcie"
-            >
-              <span class="gallery__btn-icon" aria-hidden="true"></span>
-            </button>
-            <div class="gallery__track">
-              <div
-                class="gallery__slide"
-                role="group"
-                aria-roledescription="slide"
-                aria-current="true"
-              >
+          <div class="gallery swiper" aria-label="Galeria zdjęć sklepu">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <picture>
                   <source
                     srcset="
@@ -331,12 +303,7 @@
                   />
                 </picture>
               </div>
-
-              <div
-                class="gallery__slide"
-                role="group"
-                aria-roledescription="slide"
-              >
+              <div class="swiper-slide">
                 <picture>
                   <source
                     srcset="
@@ -355,11 +322,7 @@
                   />
                 </picture>
               </div>
-              <div
-                class="gallery__slide"
-                role="group"
-                aria-roledescription="slide"
-              >
+              <div class="swiper-slide">
                 <picture>
                   <source
                     srcset="
@@ -378,11 +341,7 @@
                   />
                 </picture>
               </div>
-              <div
-                class="gallery__slide"
-                role="group"
-                aria-roledescription="slide"
-              >
+              <div class="swiper-slide">
                 <picture>
                   <source
                     srcset="
@@ -402,6 +361,21 @@
                 </picture>
               </div>
             </div>
+            <button
+              type="button"
+              class="gallery__btn gallery__btn--prev"
+              aria-label="Poprzednie zdjęcie"
+            >
+              <span class="gallery__btn-icon" aria-hidden="true"></span>
+            </button>
+            <button
+              type="button"
+              class="gallery__btn gallery__btn--next"
+              aria-label="Następne zdjęcie"
+            >
+              <span class="gallery__btn-icon" aria-hidden="true"></span>
+            </button>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -595,6 +569,7 @@
       }
     </script>
     <!-- Script – mobile menu, gallery, scroll-top, lazy-load map -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="src/js/main.min.js" defer></script>
   </body>
 </html>
