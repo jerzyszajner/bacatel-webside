@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Kopiuje pliki fontów z @fontsource do src/assets/fonts/
+ * Copies font files from @fontsource to src/assets/fonts/
  * Run: node scripts/build-fonts.js
  */
 const fs = require('fs');
@@ -14,14 +14,8 @@ const FONTS = [
     pkg: '@fontsource/cormorant-garamond',
     files: [
       'cormorant-garamond-latin-400-normal.woff2',
-      'cormorant-garamond-latin-400-italic.woff2',
-      'cormorant-garamond-latin-500-normal.woff2',
-      'cormorant-garamond-latin-600-normal.woff2',
       'cormorant-garamond-latin-700-normal.woff2',
       'cormorant-garamond-latin-ext-400-normal.woff2',
-      'cormorant-garamond-latin-ext-400-italic.woff2',
-      'cormorant-garamond-latin-ext-500-normal.woff2',
-      'cormorant-garamond-latin-ext-600-normal.woff2',
       'cormorant-garamond-latin-ext-700-normal.woff2',
     ],
   },
@@ -29,12 +23,8 @@ const FONTS = [
     pkg: '@fontsource/dm-sans',
     files: [
       'dm-sans-latin-400-normal.woff2',
-      'dm-sans-latin-500-normal.woff2',
-      'dm-sans-latin-600-normal.woff2',
       'dm-sans-latin-700-normal.woff2',
       'dm-sans-latin-ext-400-normal.woff2',
-      'dm-sans-latin-ext-500-normal.woff2',
-      'dm-sans-latin-ext-600-normal.woff2',
       'dm-sans-latin-ext-700-normal.woff2',
     ],
   },
@@ -43,6 +33,14 @@ const FONTS = [
 function main() {
   if (!fs.existsSync(FONTS_DIR)) {
     fs.mkdirSync(FONTS_DIR, { recursive: true });
+  } else {
+    // Remove obsolete files – keep only those in the list
+    const keep = new Set(FONTS.flatMap((f) => f.files));
+    for (const name of fs.readdirSync(FONTS_DIR)) {
+      if (!keep.has(name)) {
+        fs.unlinkSync(path.join(FONTS_DIR, name));
+      }
+    }
   }
 
   let count = 0;
