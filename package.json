@@ -6,7 +6,7 @@
     "build:images": "node scripts/optimize-images.js",
     "build:favicons": "node scripts/build-favicons.js",
     "build:css": "npx clean-css-cli -o src/css/main.min.css src/css/main.css",
-    "build:js": "npx terser src/js/theme.js src/js/nav.js src/js/gallery.js src/js/hours.js src/js/main.js -o src/js/main.min.js -c -m",
+    "build:js": "npx terser src/js/theme.js src/js/nav.js src/js/gallery.js src/js/hours.js src/js/scroll.js src/js/map.js src/js/main.js -o src/js/main.min.js -c -m",
     "build:fonts": "node scripts/build-fonts.js"
   },
   "devDependencies": {
