@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generuje favicon PNG i ICO z favicon.svg
+ * Generates favicon PNG and ICO from favicon.svg
  * Run: node scripts/build-favicons.js
  */
 const fs = require('fs');

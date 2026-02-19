@@ -45,9 +45,10 @@
 }
 
 /* ==========================================================================
-   Dark mode – profesjonalna paleta ciemna
+   Dark mode
    ========================================================================== */
 
+/* Dark mode – set by script (localStorage or prefers-color-scheme) */
 [data-theme="dark"] {
   --color-bg: #121110;
   --color-bg-light: #1a1918;
@@ -75,36 +76,4 @@
   --color-btn-on-accent: #fff;
   --color-skip-link-text: #0d0d0d;
   --color-logo-circle: #1c1b19;
-}
-
-/* System preference – fallback when no saved preference */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --color-bg: #121110;
-    --color-bg-light: #1a1918;
-    --color-bg-warm: #161514;
-    --color-bg-accent: #1e1d1b;
-    --color-bg-dark: #0d0c0c;
-    --color-bg-dark-alt: #141312;
-    --color-text: #e8e6e2;
-    --color-text-muted: #a8a49e;
-    --color-text-light: #e8e6e2;
-    --color-text-light-muted: #8a8680;
-    --color-accent: #c9a227;
-    --color-accent-hover: #e0b83d;
-    --color-accent-subtle: rgba(201, 162, 39, 0.2);
-    --color-brand: #e63950;
-    --color-brand-dark: #c41e3a;
-    --color-border: #2e2c2a;
-    --color-border-dark: #3a3834;
-    --color-card: #1c1b19;
-    --color-shadow: rgba(0, 0, 0, 0.4);
-    --color-header-bg: #121110;
-    --color-hero-gradient-start: #0f0e0d;
-    --color-hero-gradient-end: #1a1918;
-    --color-hero-image-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(201, 162, 39, 0.15);
-    --color-btn-on-accent: #fff;
-    --color-skip-link-text: #0d0d0d;
-    --color-logo-circle: #1c1b19;
-  }
 }
