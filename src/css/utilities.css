@@ -62,20 +62,6 @@
   -webkit-mask-size: contain;
 }
 
-@media (max-width: 768px) {
-  .scroll-top {
-    bottom: var(--space-lg);
-    right: var(--space-lg);
-    width: 44px;
-    height: 44px;
-  }
-
-  .scroll-top .scroll-top__icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
 /* Mobile layout overrides */
 @media (max-width: 768px) {
   .hero__cta {
