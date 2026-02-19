@@ -4,6 +4,13 @@
 
 .section {
   padding: var(--space-3xl) 0;
+  scroll-margin-top: 72px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-2xl) 0;
+  }
 }
 
 .section--light {
@@ -47,6 +54,12 @@
 .hero {
   padding: var(--space-3xl) 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
 }
 
 .hero__title {
