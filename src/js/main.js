@@ -64,12 +64,6 @@ function scrollToTop(e) {
 document.addEventListener("DOMContentLoaded", () => {
   /** Module initialization */
   initTheme();
-
-  const themeToggle = document.querySelector(".theme-toggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", toggleTheme);
-  }
-
   initNav();
   initGallery();
   initActiveNav();

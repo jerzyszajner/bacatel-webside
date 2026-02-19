@@ -50,7 +50,7 @@ function updateThemeUI(theme) {
 
 /**
  * Initializes theme on page load.
- * Applies saved preference or system preference.
+ * Applies saved preference or system preference, binds toggle button.
  */
 function initTheme() {
   const stored = localStorage.getItem(THEME_STORAGE_KEY);
@@ -58,6 +58,11 @@ function initTheme() {
     document.documentElement.setAttribute("data-theme", stored);
   }
   updateThemeUI(getEffectiveTheme());
+
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
+  }
 }
 
 /**
