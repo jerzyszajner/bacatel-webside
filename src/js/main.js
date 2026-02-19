@@ -1,7 +1,7 @@
 /**
  * Baca Tel – scroll-to-top, map lazy-load, app init
  *
- * Entry point: initializes modules (theme, nav, gallery),
+ * Entry point: initializes modules (theme, nav, gallery, hours),
  * handles logo, scroll-to-top button, Google Maps lazy-load.
  */
 
@@ -64,6 +64,7 @@ function scrollToTop(e) {
 document.addEventListener("DOMContentLoaded", () => {
   /** Module initialization */
   initTheme();
+  updateHoursStatus();
   initNav();
   initGallery();
   initActiveNav();
