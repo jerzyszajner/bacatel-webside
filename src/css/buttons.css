@@ -27,20 +27,21 @@
 
 .btn--call {
   position: relative;
-  background: var(--color-accent);
+  background: var(--color-brand);
   color: var(--color-btn-on-accent);
   border: none;
+  animation: btn-call-pulse 2.5s ease-in-out infinite;
 }
 
 .btn--call:hover {
-  background: var(--color-accent-hover);
+  background: var(--color-brand-dark);
   color: var(--color-btn-on-accent);
-  box-shadow: 0 4px 16px rgba(154, 123, 15, 0.35);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.35);
   animation: none;
 }
 
 .btn--call:active {
-  box-shadow: 0 2px 8px rgba(154, 123, 15, 0.3);
+  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
 }
 
 .btn--secondary {
@@ -56,21 +57,19 @@
 
 .btn--route {
   position: relative;
-  background: var(--color-brand);
+  background: var(--color-accent);
   color: var(--color-btn-on-accent);
   border: none;
-  animation: btn-route-pulse 2.5s ease-in-out infinite;
 }
 
 .btn--route:hover {
-  background: var(--color-brand-dark);
+  background: var(--color-accent-hover);
   color: var(--color-btn-on-accent);
-  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.35);
-  animation: none;
+  box-shadow: 0 4px 16px rgba(154, 123, 15, 0.35);
 }
 
 .btn--route:active {
-  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
+  box-shadow: 0 2px 8px rgba(154, 123, 15, 0.3);
 }
 
 .btn__icon {
@@ -91,7 +90,7 @@
   -webkit-mask-image: url("../assets/icons/icon-phone.svg");
 }
 
-@keyframes btn-route-pulse {
+@keyframes btn-call-pulse {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.3);
   }

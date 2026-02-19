@@ -46,6 +46,12 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
 .section__title--light {
   color: var(--color-text-light);
 }
@@ -59,6 +65,10 @@
 @media (max-width: 768px) {
   .hero {
     padding: var(--space-2xl) 0;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 10vw, 3rem);
   }
 }
 
