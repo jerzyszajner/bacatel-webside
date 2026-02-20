@@ -3,20 +3,12 @@
  * Active nav highlighting, scroll-to-top (logo + button), scroll-top visibility.
  */
 
-/** Updates active nav link based on visible section. */
-function updateActiveNav() {
+/** Scroll threshold (px) to show the scroll-to-top button. */
+const SCROLL_TOP_THRESHOLD = Math.min(400, typeof window !== "undefined" ? window.innerHeight : 400);
+
+/** Updates active nav link based on section id. */
+function setActiveNav(activeId) {
   const navLinks = document.querySelectorAll(".nav__link");
-  const sections = document.querySelectorAll("#o-nas, #galeria, #oferta, #serwis, #kontakt");
-  const scrollY = window.scrollY + 120;
-  let activeId = null;
-
-  for (const section of sections) {
-    if (scrollY >= section.offsetTop && scrollY < section.offsetTop + section.offsetHeight) {
-      activeId = section.id;
-      break;
-    }
-  }
-
   navLinks.forEach((link) => {
     link.classList.toggle("nav__link--active", link.getAttribute("href") === `#${activeId}`);
   });
@@ -35,26 +27,65 @@ function handleScrollToTop(el) {
   if (el) el.blur();
 }
 
-/** Initializes scroll behavior: active nav, logo + scroll-top clicks, scroll-top visibility. */
+/** Initializes scroll behavior: active nav (IntersectionObserver), logo + scroll-top, button visibility. */
 function initScroll() {
+  const header = document.querySelector(".header");
+  const headerHeight = header?.offsetHeight ?? 72;
   const logo = document.querySelector(".logo");
   const scrollTopBtn = document.querySelector(".scroll-top");
+  const sections = document.querySelectorAll("#o-nas, #galeria, #oferta, #serwis, #kontakt");
 
-  function onScroll() {
-    updateActiveNav();
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveNav(entry.target.id);
+        }
+      });
+      // When a section leaves (isIntersecting: false), we ignore it.
+      // The next section entering the zone will set itself as active.
+    },
+    {
+      root: null,
+      rootMargin: `-${headerHeight}px 0px -60% 0px`,
+      threshold: 0,
+    }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+
+  let ticking = false;
+  function updateScrollTopVisibility() {
     if (scrollTopBtn) {
-      const isVisible = window.scrollY > 400;
+      const isVisible = window.scrollY > SCROLL_TOP_THRESHOLD;
       scrollTopBtn.classList.toggle("is-visible", isVisible);
       scrollTopBtn.setAttribute("aria-hidden", isVisible ? "false" : "true");
     }
+    ticking = false;
   }
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollTopVisibility);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+  updateScrollTopVisibility();
 
   if (logo) {
-    logo.addEventListener("click", (e) => { e.preventDefault(); handleScrollToTop(logo); });
+    logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleScrollToTop(logo);
+    });
   }
   if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", (e) => { e.preventDefault(); handleScrollToTop(scrollTopBtn); });
+    scrollTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleScrollToTop(scrollTopBtn);
+    });
   }
 }
