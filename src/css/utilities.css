@@ -19,7 +19,7 @@
   position: fixed;
   bottom: var(--space-xl);
   right: var(--space-xl);
-  z-index: 40;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-content: center;

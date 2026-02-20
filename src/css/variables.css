@@ -42,6 +42,7 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --transition: 0.2s ease;
+  --transition-nav: 0.25s ease;
 }
 
 /* ==========================================================================

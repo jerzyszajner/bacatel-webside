@@ -12,6 +12,7 @@
 function initNav() {
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
+  const overlay = document.getElementById("nav-overlay");
 
   if (!navToggle || !nav) return;
 
@@ -29,7 +30,19 @@ function initNav() {
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
     navToggle.setAttribute("aria-expanded", !isExpanded);
     nav.classList.toggle("is-open");
+    overlay?.classList.toggle("is-visible", !isExpanded);
+    document.body.classList.toggle("menu-open", !isExpanded);
     updateMenuLabel();
+  });
+
+  /** Close menu on overlay click */
+  overlay?.addEventListener("click", () => {
+    navToggle.setAttribute("aria-expanded", "false");
+    nav.classList.remove("is-open");
+    overlay?.classList.remove("is-visible");
+    document.body.classList.remove("menu-open");
+    updateMenuLabel();
+    navToggle.focus();
   });
 
   /** Close menu on link click (smooth scroll handles navigation) */
@@ -37,6 +50,8 @@ function initNav() {
     link.addEventListener("click", () => {
       navToggle.setAttribute("aria-expanded", "false");
       nav.classList.remove("is-open");
+      overlay?.classList.remove("is-visible");
+      document.body.classList.remove("menu-open");
       updateMenuLabel();
       navToggle.focus();
     });
