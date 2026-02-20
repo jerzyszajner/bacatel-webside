@@ -7,6 +7,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   updateHoursStatus();
+  setInterval(updateHoursStatus, 60 * 1000);
   initNav();
   initGallery();
   initScroll();

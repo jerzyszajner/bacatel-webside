@@ -21,10 +21,9 @@ function updateHoursStatus() {
     new Intl.DateTimeFormat("en-CA", tz).formatToParts(now).map((p) => [p.type, p.value])
   );
   const timeParts = Object.fromEntries(
-    new Intl.DateTimeFormat("en-GB", { ...tz, hour12: false }).formatToParts(now).map((p) => [
-      p.type,
-      p.value,
-    ])
+    new Intl.DateTimeFormat("en-GB", { ...tz, hour12: false, hour: "2-digit", minute: "2-digit" })
+      .formatToParts(now)
+      .map((p) => [p.type, p.value])
   );
 
   const date = new Date(
