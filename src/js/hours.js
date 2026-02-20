@@ -7,22 +7,35 @@
 
 /**
  * Updates hero hours status – uses Europe/Warsaw timezone.
+ * Uses Intl.formatToParts to avoid string parsing; works correctly for any visitor timezone.
  */
 function updateHoursStatus() {
   const el = document.getElementById("hours-status");
   if (!el) return;
 
   const now = new Date();
-  const dateStr = now.toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" });
-  const timeStr = now.toLocaleTimeString("en-GB", {
-    timeZone: "Europe/Warsaw",
-    hour12: false,
-  });
-  const [year, month, day] = dateStr.split("-").map(Number);
-  const [hour, minute] = timeStr.split(":").map(Number);
-  const date = new Date(year, month - 1, day);
+  const tz = { timeZone: "Europe/Warsaw" };
+
+  // en-CA → YYYY-MM-DD, en-GB → 24h; predictable formats for formatToParts
+  const dateParts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-CA", tz).formatToParts(now).map((p) => [p.type, p.value])
+  );
+  const timeParts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-GB", { ...tz, hour12: false }).formatToParts(now).map((p) => [
+      p.type,
+      p.value,
+    ])
+  );
+
+  const date = new Date(
+    Number(dateParts.year),
+    Number(dateParts.month) - 1,
+    Number(dateParts.day)
+  );
   const dayOfWeek = date.getDay();
-  const time = hour * 60 + minute;
+  const time =
+    Number(timeParts.hour) * 60 +
+    Number(timeParts.minute || 0);
 
   const HOURS = {
     1: [9 * 60, 17 * 60],
