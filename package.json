@@ -1,9 +1,9 @@
 {
-  "name": "bacatel-website",
+  "name": "demo-store-website",
   "private": true,
   "scripts": {
     "build": "npm run build:images && npm run build:favicons && npm run build:fonts && npm run build:css && npm run build:js",
-    "build:images": "node scripts/optimize-images.js",
+    "build:images": "node scripts/optimize-images.mjs",
     "build:favicons": "node scripts/build-favicons.js",
     "build:css": "npx clean-css-cli -o src/css/main.min.css src/css/main.css",
     "build:js": "npx terser src/js/theme.js src/js/nav.js src/js/gallery.js src/js/hours.js src/js/scroll.js src/js/map.js src/js/main.js -o src/js/main.min.js -c -m",
