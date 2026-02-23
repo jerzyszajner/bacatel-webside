@@ -1,13 +1,13 @@
-# Baca Tel – Business Card Website
+# Nordic Mobile – Demo Website
 
-Modern single-page website for Baca Tel (mobile phones shop, Przeworsk) – HTML, CSS, vanilla JS.
+Demo single-page website for Nordic Mobile (fictional mobile phones shop, Oslo, Norway) – HTML, CSS, vanilla JS. For presentation purposes only.
 
-**Live:** [https://bacatel.netlify.app/](https://bacatel.netlify.app/)
+**Live:** [https://nordic-mobile.netlify.app/](https://nordic-mobile.netlify.app/)
 
 ## Project Structure
 
 ```
-bacatel-website/
+demo-store-website/
 ├── index.html          # Main page
 ├── README.md
 ├── package.json

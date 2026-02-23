@@ -1,5 +1,5 @@
 /**
- * Baca Tel – scroll behavior
+ * Nordic Mobile – scroll behavior
  * Active nav highlighting, scroll-to-top (logo + button), scroll-top visibility.
  */
 
@@ -33,7 +33,7 @@ function initScroll() {
   const headerHeight = header?.offsetHeight ?? 72;
   const logo = document.querySelector(".logo");
   const scrollTopBtn = document.querySelector(".scroll-top");
-  const sections = document.querySelectorAll("#o-nas, #galeria, #oferta, #serwis, #kontakt");
+  const sections = document.querySelectorAll("#om-oss, #galleri, #tilbud, #service, #kontakt");
 
   const observer = new IntersectionObserver(
     (entries) => {

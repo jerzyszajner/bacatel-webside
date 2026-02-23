@@ -1,5 +1,5 @@
 /**
- * Baca Tel – app init
+ * Nordic Mobile – app init
  *
  * Entry point: initializes modules (theme, nav, gallery, hours, scroll, map).
  */

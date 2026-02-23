@@ -1,5 +1,5 @@
 /**
- * Baca Tel – gallery carousel (Swiper)
+ * Nordic Mobile – gallery carousel (Swiper)
  */
 function initGallery() {
   const el = document.querySelector(".gallery.swiper");

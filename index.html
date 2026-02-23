@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pl" id="top">
+<html lang="nb" id="top">
   <head>
     <!-- Theme – prevents flicker on load -->
     <script>
       (function () {
-        var s = localStorage.getItem("bacatel-theme");
+        var s = localStorage.getItem("demo-store-theme");
         if (s === "dark" || s === "light")
           document.documentElement.setAttribute("data-theme", s);
         else if (
@@ -18,35 +18,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Baca Tel – Telefony komórkowe i serwis Przeworsk | Sklep od 2003
+      Nordic Mobile – Mobiltelefoner og service Oslo | Butikk siden 2015
     </title>
     <meta
       name="description"
-      content="Baca Tel Przeworsk – sklep z telefonami komórkowymi i akcesoriami od 2003 r. Telefony nowe i używane, serwis, ładowarki, szkła hartowane. ul. Kazimierzowska 4b. Tel. 692 288 888."
+      content="Nordic Mobile Oslo – butikk med mobiltelefoner og tilbehør siden 2015. Nye og brukte mobiltelefoner, service, ladere, styrke glass. Karl Johans gate 1. Tlf. 22 00 00 00."
     />
     <meta
       name="keywords"
-      content="telefony komórkowe Przeworsk, sklep z telefonami Przeworsk, serwis telefonów Przeworsk, Baca Tel, akcesoria komórkowe, telefony używane Przeworsk"
+      content="mobiltelefoner Oslo, mobilbutikk Oslo, mobilservice Oslo, Nordic Mobile, mobiltilbehør, brukte mobiltelefoner Oslo"
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#f2ede6" id="theme-color" />
-    <link rel="canonical" href="https://www.bacatel.pl/" />
+    <link rel="canonical" href="https://nordic-mobile.netlify.app/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.bacatel.pl/" />
+    <meta property="og:url" content="https://nordic-mobile.netlify.app/" />
     <meta
       property="og:title"
-      content="Baca Tel – Telefony komórkowe i serwis Przeworsk"
+      content="Nordic Mobile – Mobiltelefoner og service Oslo"
     />
     <meta
       property="og:description"
-      content="Sklep z telefonami komórkowymi i akcesoriami w Przeworsku od 2003 r. Profesjonalny serwis telefonów. ul. Kazimierzowska 4b."
+      content="Butikk med mobiltelefoner og tilbehør i Oslo siden 2015. Profesjonell mobilservice. Karl Johans gate 1."
     />
-    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale" content="nb_NO" />
     <meta
       property="og:image"
-      content="https://www.bacatel.pl/src/assets/images/hero-sklep.png"
+      content="https://nordic-mobile.netlify.app/src/assets/images/hero.jpg"
     />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="589" />
@@ -98,12 +98,12 @@
   </head>
   <body>
     <!-- Skip link – accessibility (keyboard) -->
-    <a href="#main" class="skip-link">Przejdź do treści</a>
+    <a href="#main" class="skip-link">Hopp til innhold</a>
 
     <!-- Header – logo, navigation, mobile menu -->
     <header class="header">
       <div class="container header__inner">
-        <a href="#top" class="logo" aria-label="Baca Tel – strona główna">
+        <a href="#top" class="logo" aria-label="Nordic Mobile – forsiden">
           <span class="logo__wrap">
             <svg
               class="logo__img"
@@ -131,7 +131,7 @@
                 stroke-linejoin="round"
                 paint-order="stroke fill"
               >
-                BACA-TEL
+                N-Mobile
               </text>
             </svg>
           </span>
@@ -139,8 +139,8 @@
         <button
           type="button"
           class="theme-toggle"
-          aria-label="Przełącz tryb ciemny"
-          title="Tryb ciemny"
+          aria-label="Bytt til mørk modus"
+          title="Mørk modus"
         >
           <span
             class="theme-toggle__icon theme-toggle__icon--sun"
@@ -183,19 +183,19 @@
         <button
           type="button"
           class="nav-toggle"
-          aria-label="Otwórz menu"
+          aria-label="Åpne meny"
           aria-expanded="false"
         >
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
         </button>
-        <nav class="nav" aria-label="Główne">
+        <nav class="nav" aria-label="Hoved">
           <ul class="nav__list">
-            <li><a href="#o-nas" class="nav__link">O nas</a></li>
-            <li><a href="#galeria" class="nav__link">Galeria</a></li>
-            <li><a href="#oferta" class="nav__link">Oferta</a></li>
-            <li><a href="#serwis" class="nav__link">Serwis</a></li>
+            <li><a href="#om-oss" class="nav__link">Om oss</a></li>
+            <li><a href="#galleri" class="nav__link">Galleri</a></li>
+            <li><a href="#tilbud" class="nav__link">Tilbud</a></li>
+            <li><a href="#service" class="nav__link">Service</a></li>
             <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
           </ul>
         </nav>
@@ -210,46 +210,43 @@
       <!-- Hero – banner, CTA (call, get directions), store image -->
       <section class="hero section--hero">
         <div class="container hero__inner">
-          <h1 class="hero__title">Baca Tel</h1>
-          <p class="hero__subtitle">
-            Telefony komórkowe i akcesoria w Przeworsku
-          </p>
-          <p class="hero__tagline">Na rynku od 2003 roku. Zapraszamy.</p>
+          <h1 class="hero__title">Nordic Mobile</h1>
+          <p class="hero__subtitle">Mobiltelefoner og tilbehør i Oslo</p>
+          <p class="hero__tagline">I markedet siden 2015. Velkommen.</p>
           <p
             class="hero__hours-status"
             id="hours-status"
             aria-live="polite"
           ></p>
           <div class="hero__cta">
-            <a href="tel:+48692288888" class="btn btn--call"
+            <a href="tel:+4722000000" class="btn btn--call"
               ><span
                 class="btn__icon btn__icon--phone"
                 aria-hidden="true"
               ></span
-              >Zadzwoń: 692 288 888</a
+              >Ring: 22 00 00 00</a
             >
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=ul.+Kazimierzowska+4b,+37-200+Przeworsk&travelmode=driving"
+              href="https://www.google.com/maps/dir/?api=1&destination=Karl+Johans+gate+1,+0154+Oslo,+Norway&travelmode=driving"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--route"
-              ><span class="btn__icon" aria-hidden="true"></span>Wyznacz
-              trasę</a
+              ><span class="btn__icon" aria-hidden="true"></span>Vis rute</a
             >
           </div>
           <div class="hero__image">
             <picture>
               <source
                 srcset="
-                  src/assets/images/hero-sklep-900w.webp   900w,
-                  src/assets/images/hero-sklep-1024w.webp 1024w
+                  src/assets/images/hero-900w.webp   900w,
+                  src/assets/images/hero-1024w.webp 1024w
                 "
                 type="image/webp"
                 sizes="(max-width: 960px) 100vw, 900px"
               />
               <img
-                src="src/assets/images/hero-sklep.png"
-                alt="Sklep Baca Tel – ul. Kazimierzowska 4b, Przeworsk"
+                src="src/assets/images/hero.jpg"
+                alt="Nordic Mobile butikk – Karl Johans gate 1, Oslo"
                 width="1024"
                 height="589"
                 fetchpriority="high"
@@ -260,70 +257,49 @@
       </section>
 
       <!-- About us – store history -->
-      <section id="o-nas" class="section section--light">
+      <section id="om-oss" class="section section--light">
         <div class="container">
-          <h2 class="section__title">O nas</h2>
+          <h2 class="section__title">Om oss</h2>
           <div class="content-block content-block--about">
             <p>
-              Nasz sklep istnieje na przeworskim rynku od
-              <strong>2003 r.</strong>. Zajmujemy się handlem telefonami
-              komórkowymi i akcesoriami. Dzięki doświadczeniu oraz dużej
-              powierzchni sklepu mogliśmy optymalnie dopasować ofertę do potrzeb
-              naszych Klientów.
+              Vår butikk har vært i Oslo-markedet siden
+              <strong>2015</strong>. Vi driver med salg av mobiltelefoner og
+              tilbehør. Takket være erfaring og stor butikkflate har vi kunnet
+              tilpasse utvalget til våre kunders behov.
             </p>
             <p>
-              Aktualnie sklep znajduje się w Przeworsku przy ulicy
-              <strong>Kazimierzowskiej 4b</strong> (jednokierunkowa ulica przy
-              boisku MOSiRU). Wcześniej prowadziliśmy działalność w budynku przy
-              „Zielonym Rynku".
+              Butikken ligger i sentrum av Oslo ved
+              <strong>Karl Johans gate 1</strong>. Gunstig beliggenhet i hjertet
+              av byen gjør det enkelt å nå oss med kollektivtransport eller til
+              fots.
             </p>
-            <p>Prowadzimy też profesjonalny serwis telefonów. Zapraszamy.</p>
+            <p>Vi tilbyr også profesjonell mobilservice. Velkommen.</p>
           </div>
         </div>
       </section>
 
       <!-- Gallery – store photos (carousel) -->
-      <section id="galeria" class="section section--dark">
+      <section id="galleri" class="section section--dark">
         <div class="container">
-          <h2 class="section__title section__title--light">Galeria</h2>
+          <h2 class="section__title section__title--light">Galleri</h2>
           <p class="gallery__intro">
-            Zapraszamy do naszego sklepu – zobacz, jak wygląda Baca Tel od
-            środka i z zewnątrz.
+            Velkommen til butikken vår – se utvalget og atmosfæren.
           </p>
-          <div class="gallery swiper" aria-label="Galeria zdjęć sklepu">
+          <div class="gallery swiper" aria-label="Butikkbilder galleri">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <picture>
                   <source
                     srcset="
-                      src/assets/images/galeria-sklep-756w.webp   756w,
-                      src/assets/images/galeria-sklep-1024w.webp 1024w
+                      src/assets/images/gallery-1-756w.webp   756w,
+                      src/assets/images/gallery-1-1024w.webp 1024w
                     "
                     type="image/webp"
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
-                    src="src/assets/images/galeria-sklep.png"
-                    alt="Baca Tel – szyld i witryna sklepu"
-                    width="1024"
-                    height="589"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="
-                      src/assets/images/galeria-front-756w.webp   756w,
-                      src/assets/images/galeria-front-1024w.webp 1024w
-                    "
-                    type="image/webp"
-                    sizes="(max-width: 960px) 100vw, 960px"
-                  />
-                  <img
-                    src="src/assets/images/galeria-front.png"
-                    alt="Baca Tel – widok na sklep od frontu, ul. Kazimierzowska 4b"
+                    src="src/assets/images/gallery-1.jpg"
+                    alt="Nordic Mobile – galleri"
                     width="1024"
                     height="768"
                     loading="lazy"
@@ -334,15 +310,15 @@
                 <picture>
                   <source
                     srcset="
-                      src/assets/images/galeria-corner-756w.webp   756w,
-                      src/assets/images/galeria-corner-1024w.webp 1024w
+                      src/assets/images/gallery-2-756w.webp   756w,
+                      src/assets/images/gallery-2-1024w.webp 1024w
                     "
                     type="image/webp"
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
-                    src="src/assets/images/galeria-corner.png"
-                    alt="Baca Tel – widok na sklep z narożnika"
+                    src="src/assets/images/gallery-2.jpg"
+                    alt="Nordic Mobile – galleri"
                     width="1024"
                     height="768"
                     loading="lazy"
@@ -353,15 +329,15 @@
                 <picture>
                   <source
                     srcset="
-                      src/assets/images/galeria-wnetrze-756w.webp   756w,
-                      src/assets/images/galeria-wnetrze-1024w.webp 1024w
+                      src/assets/images/gallery-3-756w.webp   756w,
+                      src/assets/images/gallery-3-1024w.webp 1024w
                     "
                     type="image/webp"
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
-                    src="src/assets/images/galeria-wnetrze.png"
-                    alt="Baca Tel – wnętrze sklepu, ekspozycja telefonów i akcesoriów"
+                    src="src/assets/images/gallery-3.jpg"
+                    alt="Nordic Mobile – galleri"
                     width="1024"
                     height="768"
                     loading="lazy"
@@ -372,14 +348,14 @@
             <button
               type="button"
               class="gallery__btn gallery__btn--prev"
-              aria-label="Poprzednie zdjęcie"
+              aria-label="Forrige bilde"
             >
               <span class="gallery__btn-icon" aria-hidden="true"></span>
             </button>
             <button
               type="button"
               class="gallery__btn gallery__btn--next"
-              aria-label="Następne zdjęcie"
+              aria-label="Neste bilde"
             >
               <span class="gallery__btn-icon" aria-hidden="true"></span>
             </button>
@@ -389,51 +365,48 @@
       </section>
 
       <!-- Offer – products for sale -->
-      <section id="oferta" class="section section--warm">
+      <section id="tilbud" class="section section--warm">
         <div class="container">
           <div class="section-header">
-            <h2 class="section__title">
-              W ciągłej ofercie handlowej posiadamy
-            </h2>
+            <h2 class="section__title">Vi har i kontinuerlig handel</h2>
             <p class="section-intro">
-              Telefony, akcesoria i wszystko, czego potrzebujesz do swojego
-              urządzenia.
+              Mobiltelefoner, tilbehør og alt du trenger for enheten din.
             </p>
           </div>
           <ul class="section-list">
-            <li class="offer-item tag">Telefony komórkowe nowe i używane</li>
-            <li class="offer-item tag">Pokrowce</li>
-            <li class="offer-item tag">Futerały</li>
-            <li class="offer-item tag">Baterie</li>
-            <li class="offer-item tag">Ładowarki sieciowe i samochodowe</li>
-            <li class="offer-item tag">Szkła hartowane</li>
-            <li class="offer-item tag">Uchwyty samochodowe</li>
-            <li class="offer-item tag">Kable USB</li>
-            <li class="offer-item tag">Power banki</li>
-            <li class="offer-item tag">Karty pamięci</li>
-            <li class="offer-item tag">Transmitery samochodowe</li>
-            <li class="offer-item tag">Zestawy słuchawkowe</li>
-            <li class="offer-item tag">Doładowania i zestawy startowe</li>
+            <li class="offer-item tag">Nye og brukte mobiltelefoner</li>
+            <li class="offer-item tag">Mobildeksler</li>
+            <li class="offer-item tag">Etui</li>
+            <li class="offer-item tag">Batterier</li>
+            <li class="offer-item tag">Nettladere og biladere</li>
+            <li class="offer-item tag">Styrke glass</li>
+            <li class="offer-item tag">Bilholdere</li>
+            <li class="offer-item tag">USB-kabler</li>
+            <li class="offer-item tag">Power bank</li>
+            <li class="offer-item tag">Minnekort</li>
+            <li class="offer-item tag">Bluetooth-avsendere</li>
+            <li class="offer-item tag">Hodetelefoner</li>
+            <li class="offer-item tag">Mobildata og påfyll</li>
           </ul>
-          <p class="offer-note">…i wiele innych</p>
+          <p class="offer-note">…og mye mer</p>
         </div>
       </section>
 
       <!-- Service – phone repairs -->
-      <section id="serwis" class="section section--light">
+      <section id="service" class="section section--light">
         <div class="container">
           <div class="section-header">
-            <h2 class="section__title">Profesjonalny serwis telefonów</h2>
+            <h2 class="section__title">Profesjonell mobilservice</h2>
             <p class="section-intro">
-              Naprawiamy telefony komórkowe – szybko i fachowo.
+              Vi reparerer mobiltelefoner – raskt og profesjonelt.
             </p>
           </div>
           <ul class="section-list">
-            <li class="service-item tag">Wymiana wyświetlaczy</li>
-            <li class="service-item tag">Naprawa wejść ładowania</li>
-            <li class="service-item tag">Naprawa głośników</li>
-            <li class="service-item tag">Wymiana baterii</li>
-            <li class="service-item tag">Naprawa oprogramowania</li>
+            <li class="service-item tag">Skjermbytte</li>
+            <li class="service-item tag">Reparasjon av ladeport</li>
+            <li class="service-item tag">Reparasjon av høyttaler</li>
+            <li class="service-item tag">Batteribytte</li>
+            <li class="service-item tag">Programvareoppdatering</li>
           </ul>
         </div>
       </section>
@@ -445,7 +418,7 @@
           <div class="contact-layout">
             <div class="contact-info">
               <div class="contact-info__card">
-                <h3 class="contact-info__title">Odwiedź nas</h3>
+                <h3 class="contact-info__title">Besøk oss</h3>
                 <ul class="contact-info__list">
                   <li class="contact-info__item">
                     <span
@@ -453,11 +426,11 @@
                       aria-hidden="true"
                     ></span>
                     <a
-                      href="https://www.google.com/maps/place/ul.+Kazimierzowska+4b,+37-200+Przeworsk"
+                      href="https://www.google.com/maps/place/Karl+Johans+gate+1,+0154+Oslo,+Norway"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      ul. Kazimierzowska 4b<br />37-200 Przeworsk
+                      Karl Johans gate 1<br />0154 Oslo
                     </a>
                   </li>
                   <li class="contact-info__item">
@@ -465,27 +438,25 @@
                       class="contact-info__icon contact-info__icon--phone"
                       aria-hidden="true"
                     ></span>
-                    <a href="tel:+48692288888">692 288 888</a>
+                    <a href="tel:+4722000000">22 00 00 00</a>
                   </li>
                   <li class="contact-info__item">
                     <span
                       class="contact-info__icon contact-info__icon--mail"
                       aria-hidden="true"
                     ></span>
-                    <a href="mailto:bacatel@o2.pl">bacatel@o2.pl</a>
+                    <a href="mailto:demo@example.com">demo@example.com</a>
                   </li>
                   <li class="contact-info__item contact-info__item--hours">
                     <span
                       class="contact-info__icon contact-info__icon--clock"
                       aria-hidden="true"
                     ></span>
-                    <span
-                      >Pon. – Pt.: 9:00 – 17:00<br />Sob.: 9:00 – 13:00</span
-                    >
+                    <span>Man.–Fre.: 9:00–17:00<br />Lør.: 9:00–13:00</span>
                   </li>
                 </ul>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=ul.+Kazimierzowska+4b,+37-200+Przeworsk&travelmode=driving"
+                  href="https://www.google.com/maps/dir/?api=1&destination=Karl+Johans+gate+1,+0154+Oslo,+Norway&travelmode=driving"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn--route contact-info__cta"
@@ -494,20 +465,20 @@
                     class="btn__icon btn__icon--route"
                     aria-hidden="true"
                   ></span
-                  >Wyznacz trasę
+                  >Vis rute
                 </a>
               </div>
             </div>
             <div class="contact-map">
               <div class="contact-map__embed">
                 <iframe
-                  data-src="https://www.google.com/maps?q=ul.+Kazimierzowska+4b,+37-200+Przeworsk&output=embed"
+                  data-src="https://www.google.com/maps?q=Karl+Johans+gate+1,+0154+Oslo,+Norway&output=embed"
                   width="100%"
                   height="100%"
                   class="contact-map__iframe"
                   allowfullscreen=""
                   referrerpolicy="no-referrer-when-downgrade"
-                  title="Lokalizacja Baca Tel – ul. Kazimierzowska 4b, Przeworsk"
+                  title="Nordic Mobile – Karl Johans gate 1, Oslo"
                 ></iframe>
               </div>
             </div>
@@ -519,14 +490,14 @@
     <!-- Footer – company info, copyright -->
     <footer class="footer">
       <div class="container">
-        <p class="footer__company">Przedsiębiorstwo Wielobranżowe BACA</p>
-        <p class="footer__owner">Miłosław Bącal</p>
-        <p class="footer__address">ul. Kazimierzowska 4b, 37-200 Przeworsk</p>
-        <p class="footer__contact">692 288 888 · bacatel@o2.pl</p>
+        <p class="footer__company">Demo Company AS</p>
+        <p class="footer__owner">Demo Owner</p>
+        <p class="footer__address">Karl Johans gate 1, 0154 Oslo</p>
+        <p class="footer__contact">22 00 00 00 · demo@example.com</p>
         <p class="footer__hours">
-          Poniedziałek – Piątek 9:00 – 17:00 · Sobota 9:00 – 13:00
+          Mandag–Fredag 9:00–17:00 · Lørdag 9:00–13:00
         </p>
-        <p class="footer__copy">© Copyright Bacatel 2026</p>
+        <p class="footer__copy">© Copyright Nordic Mobile 2026</p>
       </div>
     </footer>
 
@@ -534,9 +505,9 @@
     <a
       href="#top"
       class="scroll-top"
-      aria-label="Przewiń do góry"
+      aria-label="Rull til toppen"
       aria-hidden="true"
-      title="Przewiń do góry"
+      title="Rull til toppen"
     >
       <span class="scroll-top__icon" aria-hidden="true"></span>
     </a>
@@ -546,36 +517,38 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://www.bacatel.pl/#localbusiness",
-        "name": "Baca Tel",
-        "description": "Sklep z telefonami komórkowymi i akcesoriami w Przeworsku. Profesjonalny serwis telefonów.",
-        "url": "https://www.bacatel.pl",
-        "telephone": "+48692288888",
-        "email": "bacatel@o2.pl",
-        "foundingDate": "2003",
+        "@id": "https://nordic-mobile.netlify.app/#localbusiness",
+        "name": "Nordic Mobile",
+        "description": "Butikk med mobiltelefoner og tilbehør i Oslo. Profesjonell mobilservice.",
+        "url": "https://nordic-mobile.netlify.app",
+        "telephone": "+4722000000",
+        "email": "demo@example.com",
+        "foundingDate": "2015",
         "priceRange": "$",
         "image": [
-          "https://www.bacatel.pl/src/assets/images/hero-sklep.png",
-          "https://www.bacatel.pl/src/assets/images/galeria-sklep.png"
+          "https://nordic-mobile.netlify.app/src/assets/images/hero.jpg",
+          "https://nordic-mobile.netlify.app/src/assets/images/gallery-1.jpg"
         ],
-        "logo": "https://www.bacatel.pl/src/assets/icons/favicon.svg",
+        "logo": "https://nordic-mobile.netlify.app/src/assets/icons/favicon.svg",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "ul. Kazimierzowska 4b",
-          "addressLocality": "Przeworsk",
-          "postalCode": "37-200",
-          "addressCountry": "PL"
+          "streetAddress": "Karl Johans gate 1",
+          "addressLocality": "Oslo",
+          "postalCode": "0154",
+          "addressCountry": "NO"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 50.057905,
-          "longitude": 22.492145
+          "latitude": 59.9139,
+          "longitude": 10.7522
         },
         "areaServed": {
           "@type": "City",
-          "name": "Przeworsk"
+          "name": "Oslo"
         },
-        "sameAs": ["https://maps.app.goo.gl/XwzSxYCwZAqNKK1a6"],
+        "sameAs": [
+          "https://www.google.com/maps/place/Karl+Johans+gate+1,+0154+Oslo,+Norway"
+        ],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",

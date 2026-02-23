@@ -1,5 +1,5 @@
 /**
- * Baca Tel – map lazy-load
+ * Nordic Mobile – map lazy-load
  *
  * Loads Google Maps iframe only after scrolling to Contact section.
  */

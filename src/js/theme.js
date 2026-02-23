@@ -1,11 +1,11 @@
 /**
- * Baca Tel – dark mode / theme toggle
+ * Nordic Mobile – dark mode / theme toggle
  *
  * Handles dark mode: system preference (injected by index.html),
  * localStorage persistence, header toggle button, meta theme-color updates.
  */
 
-const THEME_STORAGE_KEY = "bacatel-theme";
+const THEME_STORAGE_KEY = "demo-store-theme";
 const THEME_LIGHT = "light";
 const THEME_DARK = "dark";
 
@@ -32,8 +32,8 @@ function updateThemeUI(theme) {
   }
   const toggle = document.querySelector(".theme-toggle");
   if (toggle) {
-    toggle.setAttribute("aria-label", theme === THEME_DARK ? "Przełącz tryb jasny" : "Przełącz tryb ciemny");
-    toggle.setAttribute("title", theme === THEME_DARK ? "Tryb jasny" : "Tryb ciemny");
+    toggle.setAttribute("aria-label", theme === THEME_DARK ? "Bytt til lys modus" : "Bytt til mørk modus");
+    toggle.setAttribute("title", theme === THEME_DARK ? "Lys modus" : "Mørk modus");
   }
 }
 

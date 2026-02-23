@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bacatel.pl/sitemap.xml
+Sitemap: https://nordic-mobile.netlify.app/sitemap.xml

@@ -1,12 +1,12 @@
 /**
- * Baca Tel – hero hours status (open/closed)
+ * Nordic Mobile – hero hours status (open/closed)
  *
- * Displays current store status based on Europe/Warsaw timezone.
- * Pon–Pt 9:00–17:00, Sob 9:00–13:00, Nd closed.
+ * Displays current store status based on Europe/Oslo timezone.
+ * Man–Fre 9:00–17:00, Lør 9:00–13:00, Søn closed.
  */
 
 /**
- * Updates hero hours status – uses Europe/Warsaw timezone.
+ * Updates hero hours status – uses Europe/Oslo timezone.
  * Uses Intl.formatToParts to avoid string parsing; works correctly for any visitor timezone.
  */
 function updateHoursStatus() {
@@ -14,7 +14,7 @@ function updateHoursStatus() {
   if (!el) return;
 
   const now = new Date();
-  const tz = { timeZone: "Europe/Warsaw" };
+  const tz = { timeZone: "Europe/Oslo" };
 
   // en-CA → YYYY-MM-DD, en-GB → 24h; predictable formats for formatToParts
   const dateParts = Object.fromEntries(
@@ -48,24 +48,24 @@ function updateHoursStatus() {
   el.classList.remove("hero__hours-status--open", "hero__hours-status--closed");
 
   if (dayOfWeek === 0) {
-    el.textContent = "Zamknięte – otwarcie w poniedziałek 9:00";
+    el.textContent = "Stengt – åpner mandag 9:00";
     el.classList.add("hero__hours-status--closed");
     return;
   }
 
   const [open, close] = HOURS[dayOfWeek] || [0, 0];
   if (time < open) {
-    el.textContent = "Zamknięte – otwarcie dziś 9:00";
+    el.textContent = "Stengt – åpner i dag 9:00";
     el.classList.add("hero__hours-status--closed");
   } else if (time >= close) {
     el.textContent =
       dayOfWeek === 6
-        ? "Zamknięte – otwarcie w poniedziałek 9:00"
-        : "Zamknięte – otwarcie jutro 9:00";
+        ? "Stengt – åpner mandag 9:00"
+        : "Stengt – åpner i morgen 9:00";
     el.classList.add("hero__hours-status--closed");
   } else {
     const closeHour = Math.floor(close / 60);
-    el.textContent = "Otwarte do " + closeHour + ":00";
+    el.textContent = "Åpent til " + closeHour + ":00";
     el.classList.add("hero__hours-status--open");
   }
 }

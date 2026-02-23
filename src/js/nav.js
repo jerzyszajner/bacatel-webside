@@ -1,5 +1,5 @@
 /**
- * Baca Tel – mobile navigation menu
+ * Nordic Mobile – mobile navigation menu
  *
  * Handles hamburger menu on mobile: open/close,
  * close on link click, aria-label updates.
@@ -21,7 +21,7 @@ function initNav() {
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
     navToggle.setAttribute(
       "aria-label",
-      isExpanded ? "Zamknij menu" : "Otwórz menu",
+      isExpanded ? "Lukk meny" : "Åpne meny",
     );
   }
 

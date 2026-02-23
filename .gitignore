@@ -1,13 +1,13 @@
-# Zależności
+# Dependencies
 node_modules/
 
-# Logi i cache
+# Logs and cache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .npm
 
-# System
+# System files
 .DS_Store
 Thumbs.db
 

@@ -1,11 +1,11 @@
-# Baca Tel – optymalizacja serwera (Apache)
+# Nordic Mobile – Apache server optimization
 
-# Kompresja GZIP
+# GZIP compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# Cache statyczne pliki
+# Static file cache
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 year"
@@ -17,7 +17,7 @@
   ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
 
-# Nagłówki cache
+# Cache headers
 <IfModule mod_headers.c>
   <FilesMatch "\.(css|js|png|jpg|jpeg|webp|avif|svg)$">
     Header set Cache-Control "public, max-age=31536000"
