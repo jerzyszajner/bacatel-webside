@@ -90,4 +90,4 @@ Store source images in `src/assets/images/`. After adding or changing images, ru
 
 ## Deployment
 
-Copy files to the server. Ensure `sitemap.xml`, `robots.txt` and `.htaccess` (if using Apache) are in the domain root.
+Copy files to the server. Ensure `sitemap.xml` and `robots.txt` are in the domain root.
