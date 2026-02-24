@@ -60,7 +60,10 @@
   -webkit-mask-size: contain;
 }
 
-/* Mobile layout overrides */
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
 @media (max-width: 768px) {
   .hero__cta {
     flex-direction: column;

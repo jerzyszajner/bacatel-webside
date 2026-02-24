@@ -163,11 +163,21 @@
         </button>
         <nav class="nav" aria-label="Hoved">
           <ul class="nav__list">
-            <li><a href="#om-oss" class="nav__link">Om oss</a></li>
-            <li><a href="#galleri" class="nav__link">Galleri</a></li>
-            <li><a href="#tilbud" class="nav__link">Tilbud</a></li>
-            <li><a href="#service" class="nav__link">Service</a></li>
-            <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+            <li class="nav__item">
+              <a href="#om-oss" class="nav__link">Om oss</a>
+            </li>
+            <li class="nav__item">
+              <a href="#galleri" class="nav__link">Galleri</a>
+            </li>
+            <li class="nav__item">
+              <a href="#tilbud" class="nav__link">Tilbud</a>
+            </li>
+            <li class="nav__item">
+              <a href="#service" class="nav__link">Service</a>
+            </li>
+            <li class="nav__item">
+              <a href="#kontakt" class="nav__link">Kontakt</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -202,7 +212,11 @@
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--route"
-              ><span class="btn__icon" aria-hidden="true"></span>Vis rute</a
+              ><span class="btn__icon" aria-hidden="true"> </span>Vis rute<span
+                class="sr-only"
+              >
+                fra hero (åpnes i ny fane)</span
+              ></a
             >
           </div>
           <div class="hero__image">
@@ -216,6 +230,7 @@
                 sizes="(max-width: 960px) 100vw, 900px"
               />
               <img
+                class="hero__img"
                 src="src/assets/images/hero.jpg"
                 alt="Nordic Mobile butikk – Karl Johans gate 1, Oslo"
                 width="1024"
@@ -232,19 +247,19 @@
         <div class="container">
           <h2 class="section__title">Om oss</h2>
           <div class="content-block content-block--about">
-            <p>
+            <p class="content-block__text">
               Vår butikk har vært i Oslo-markedet siden
               <strong>2015</strong>. Vi driver med salg av mobiltelefoner og
               tilbehør. Takket være erfaring og stor butikkflate har vi kunnet
               tilpasse utvalget til våre kunders behov.
             </p>
-            <p>
+            <p class="content-block__text">
               Butikken ligger i sentrum av Oslo ved
               <strong>Karl Johans gate 1</strong>. Gunstig beliggenhet i hjertet
               av byen gjør det enkelt å nå oss med kollektivtransport eller til
               fots.
             </p>
-            <p>Vi tilbyr også profesjonell mobilservice. Velkommen.</p>
+            <p class="content-block__text">Vi tilbyr også profesjonell mobilservice. Velkommen.</p>
           </div>
         </div>
       </section>
@@ -269,6 +284,7 @@
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
+                    class="gallery__slide-img"
                     src="src/assets/images/gallery-1.jpg"
                     alt="Nordic Mobile – galleri"
                     width="1024"
@@ -288,6 +304,7 @@
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
+                    class="gallery__slide-img"
                     src="src/assets/images/gallery-2.jpg"
                     alt="Nordic Mobile – galleri"
                     width="1024"
@@ -307,6 +324,7 @@
                     sizes="(max-width: 960px) 100vw, 960px"
                   />
                   <img
+                    class="gallery__slide-img"
                     src="src/assets/images/gallery-3.jpg"
                     alt="Nordic Mobile – galleri"
                     width="1024"
@@ -345,26 +363,26 @@
             </p>
           </div>
           <ul class="section-list">
-            <li class="offer-item tag">Nye og brukte mobiltelefoner</li>
-            <li class="offer-item tag">Mobildeksler</li>
-            <li class="offer-item tag">Etui</li>
-            <li class="offer-item tag">Batterier</li>
-            <li class="offer-item tag">Nettladere og biladere</li>
-            <li class="offer-item tag">Styrke glass</li>
-            <li class="offer-item tag">Bilholdere</li>
-            <li class="offer-item tag">USB-kabler</li>
-            <li class="offer-item tag">Power bank</li>
-            <li class="offer-item tag">Minnekort</li>
-            <li class="offer-item tag">Bluetooth-avsendere</li>
-            <li class="offer-item tag">Hodetelefoner</li>
-            <li class="offer-item tag">Mobildata og påfyll</li>
+            <li class="section-list__item">Nye og brukte mobiltelefoner</li>
+            <li class="section-list__item">Mobildeksler</li>
+            <li class="section-list__item">Etui</li>
+            <li class="section-list__item">Batterier</li>
+            <li class="section-list__item">Nettladere og biladere</li>
+            <li class="section-list__item">Styrke glass</li>
+            <li class="section-list__item">Bilholdere</li>
+            <li class="section-list__item">USB-kabler</li>
+            <li class="section-list__item">Power bank</li>
+            <li class="section-list__item">Minnekort</li>
+            <li class="section-list__item">Bluetooth-avsendere</li>
+            <li class="section-list__item">Hodetelefoner</li>
+            <li class="section-list__item">Mobildata og påfyll</li>
           </ul>
           <p class="offer-note">…og mye mer</p>
         </div>
       </section>
 
       <!-- Service – phone repairs -->
-      <section id="service" class="section section--light">
+      <section id="service" class="section section--light section--service">
         <div class="container">
           <div class="section-header">
             <h2 class="section__title">Profesjonell mobilservice</h2>
@@ -373,11 +391,11 @@
             </p>
           </div>
           <ul class="section-list">
-            <li class="service-item tag">Skjermbytte</li>
-            <li class="service-item tag">Reparasjon av ladeport</li>
-            <li class="service-item tag">Reparasjon av høyttaler</li>
-            <li class="service-item tag">Batteribytte</li>
-            <li class="service-item tag">Programvareoppdatering</li>
+            <li class="section-list__item">Skjermbytte</li>
+            <li class="section-list__item">Reparasjon av ladeport</li>
+            <li class="section-list__item">Reparasjon av høyttaler</li>
+            <li class="section-list__item">Batteribytte</li>
+            <li class="section-list__item">Programvareoppdatering</li>
           </ul>
         </div>
       </section>
@@ -397,6 +415,7 @@
                       aria-hidden="true"
                     ></span>
                     <a
+                      class="contact-info__link"
                       href="https://www.google.com/maps/place/Karl+Johans+gate+1,+0154+Oslo,+Norway"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -409,21 +428,21 @@
                       class="contact-info__icon contact-info__icon--phone"
                       aria-hidden="true"
                     ></span>
-                    <a href="tel:+4722000000">22 00 00 00</a>
+                    <a class="contact-info__link" href="tel:+4722000000">22 00 00 00</a>
                   </li>
                   <li class="contact-info__item">
                     <span
                       class="contact-info__icon contact-info__icon--mail"
                       aria-hidden="true"
                     ></span>
-                    <a href="mailto:demo@example.com">demo@example.com</a>
+                    <a class="contact-info__link" href="mailto:demo@example.com">demo@example.com</a>
                   </li>
                   <li class="contact-info__item contact-info__item--hours">
                     <span
                       class="contact-info__icon contact-info__icon--clock"
                       aria-hidden="true"
                     ></span>
-                    <span>Man.–Fre.: 9:00–17:00<br />Lør.: 9:00–13:00</span>
+                    <span class="contact-info__hours-text">Man.–Fre.: 9:00–17:00<br />Lør.: 9:00–13:00</span>
                   </li>
                 </ul>
                 <a
@@ -436,8 +455,10 @@
                     class="btn__icon btn__icon--route"
                     aria-hidden="true"
                   ></span
-                  >Vis rute
-                </a>
+                  >Vis rute<span class="sr-only">
+                    fra kontakt (åpnes i ny fane)</span
+                  ></a
+                >
               </div>
             </div>
             <div class="contact-map">
@@ -461,13 +482,15 @@
     <!-- Footer – company info, copyright -->
     <footer class="footer">
       <div class="container">
-        <p class="footer__company">Demo Company AS</p>
-        <p class="footer__owner">Demo Owner</p>
-        <p class="footer__address">Karl Johans gate 1, 0154 Oslo</p>
-        <p class="footer__contact">22 00 00 00 · demo@example.com</p>
-        <p class="footer__hours">
-          Mandag–Fredag 9:00–17:00 · Lørdag 9:00–13:00
-        </p>
+        <ul class="footer__list">
+          <li class="footer__item">Demo Company AS</li>
+          <li class="footer__item">Demo Owner</li>
+          <li class="footer__item">Karl Johans gate 1, 0154 Oslo</li>
+          <li class="footer__item">22 00 00 00 · demo@example.com</li>
+          <li class="footer__item">
+            Mandag–Fredag 9:00–17:00 · Lørdag 9:00–13:00
+          </li>
+        </ul>
         <p class="footer__copy">© Copyright Nordic Mobile 2026</p>
       </div>
     </footer>

@@ -9,9 +9,18 @@
   padding: 0 var(--space-lg);
 }
 
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
 
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-sm);
   }
 }

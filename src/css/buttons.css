@@ -16,15 +16,6 @@
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
-.btn--primary {
-  background: var(--color-accent);
-  color: var(--color-btn-on-accent);
-}
-
-.btn--primary:hover {
-  background: var(--color-accent-hover);
-}
-
 .btn--call {
   position: relative;
   background: var(--color-brand);
@@ -35,17 +26,6 @@
 .btn--call:hover {
   background: var(--color-brand-dark);
   color: var(--color-btn-on-accent);
-}
-
-.btn--secondary {
-  background: var(--color-card);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-}
-
-.btn--secondary:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
 }
 
 .btn--route {
